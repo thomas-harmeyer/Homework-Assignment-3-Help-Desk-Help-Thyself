@@ -13,6 +13,13 @@ public class person {
 		this.classNumber = classNumber;
 		this.timeLeft = timeLeft;
 	}
+	public person() {
+		super();
+		this.starttime = 0;
+		this.name = "Idle";
+		this.classNumber = 0;
+		this.timeLeft = 0;
+	}
 
 	public int getstarttime() {
 		return starttime;
