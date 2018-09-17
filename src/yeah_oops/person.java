@@ -1,12 +1,18 @@
 package yeah_oops;
 
 public class person {
-	private int starttime;
+	//private int starttime;
 	private String name;
 	private int classNumber;
 	private int timeLeft;
+	
+	public person(String name, int course, int workload){
+		this.name = name;
+		classNumber = course;
+		timeLeft = workload;
+	}
 
-	public person(int starttime, String name, int classNumber, int timeLeft) {
+	/*public person(int starttime, String name, int classNumber, int timeLeft) {
 		super();
 		this.starttime = starttime;
 		this.name = name;
@@ -28,6 +34,7 @@ public class person {
 	public void setstarttime(int starttime) {
 		this.starttime = starttime;
 	}
+	*/
 
 	public String getname() {
 		return name;
