@@ -1,3 +1,10 @@
+/**
+ * COSC 2100 - Project 3
+ * This class is used in the HelpDesk class to store student information.
+ * @author [Nabil Hussaini and Thomas Harmeyer]
+ * Instructor [Dennis Brylow]
+ * TA-BOT:MAILTO [nabil.hussaini@marquette.edu]
+ */
 package yeah_oops;
 
 public class person {

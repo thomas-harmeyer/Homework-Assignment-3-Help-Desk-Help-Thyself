@@ -1,3 +1,10 @@
+/**
+ * COSC 2100 - Project 3
+ * This class will work with the HelpDeskRunner to simulate a help desk for Comp Sci students.
+ * @author [Nabil Hussaini and Thomas Harmeyer]
+ * Instructor [Dennis Brylow]
+ * TA-BOT:MAILTO [nabil.hussaini@marquette.edu]
+ */
 package yeah_oops;
 
 public class HelpDesk {
