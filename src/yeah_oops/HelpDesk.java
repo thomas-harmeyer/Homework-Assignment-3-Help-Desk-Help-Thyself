@@ -22,8 +22,10 @@ public class HelpDesk {
 	public void step() {
 		time++;
 		if (!students.isEmpty()) {
-			if (students.gettimeLeft() == 0)
+			if (students.gettimeLeft() == 0){
+				forLog.push("Time " + time + ", Finished helping " + students.top.getname + " from COSC" + students.top.getClassNumber);
 				students.pop();
+			}
 			else
 				students.settimeLeft(students.gettimeLeft() - 1);
 		}
@@ -39,7 +41,8 @@ public class HelpDesk {
 			students.push(new person(name, course, workload));
 			forLog.push("Time " + time + ", Started helping " + name + " from COSC" + course + " for " + workload
 					+ " minutes.");
-		} else
+		} 
+		else
 			forLog.push("Time " + time + ", Turned away " + name + " from COSC" + course + " for " + workload
 					+ " minutes.");
 	}
@@ -52,7 +55,7 @@ public class HelpDesk {
 		if (students.isEmpty())
 			return ("Time " + time + ", IDLE");
 		else
-			return ("Time " + time + ", Helping " + students.top.getName + " from COSC" + students.top.getClassNumber);
+			return ("Time " + time + ", Helping " + students.top.getname + " from COSC" + students.top.getClassNumber);
 	}
 
 	public String getLog(){
