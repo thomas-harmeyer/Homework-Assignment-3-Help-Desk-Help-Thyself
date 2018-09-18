@@ -26,24 +26,27 @@ public class HelpDesk {
 				students.pop();
 			}
 			else
-				students.settimeLeft(students.top().gettimeLeft() - 1);
+				students.top.settimeLeft(students.top().gettimeLeft() - 1);
 		}
 	}
 
 	public void addStudent(String name, int course, int workload) {
 		bool toAdd = false;
-		if (students.isEmpty())
+		if (students.isEmpty()){
 			toAdd = true;
-		else if (course < students.top.getClassNumber)
+		}
+		else if (course < students.top().getClassNumber()){
 			toAdd = true;
+		}
 		if (toAdd) {
 			students.push(new person(name, course, workload));
 			forLog.push("Time " + time + ", Started helping " + name + " from COSC" + course + " for " + workload
 					+ " minutes.");
 		} 
-		else
+		else{
 			forLog.push("Time " + time + ", Turned away " + name + " from COSC" + course + " for " + workload
 					+ " minutes.");
+		}
 	}
 
 	public int getTime() {
