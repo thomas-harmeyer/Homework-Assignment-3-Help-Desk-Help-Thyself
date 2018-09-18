@@ -26,7 +26,7 @@ public class HelpDesk {
 				students.pop();
 			}
 			else
-				students.top.settimeLeft(students.top().gettimeLeft() - 1);
+				students.top().settimeLeft(students.top().gettimeLeft() - 1);
 		}
 	}
 
