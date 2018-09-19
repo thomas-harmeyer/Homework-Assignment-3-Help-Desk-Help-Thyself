@@ -5,6 +5,8 @@
  * Instructor [Dennis Brylow]
  * TA-BOT:MAILTO [nabil.hussaini@marquette.edu]
  */
+package yeah_oops;
+
 public class person {
 	//private int starttime;
 	private String name;
