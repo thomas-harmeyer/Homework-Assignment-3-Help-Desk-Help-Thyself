@@ -21,8 +21,8 @@ public class HelpDesk {
 	public void step() {
 		time++;
 		if (!students.isEmpty()) {
-			if ( ((person) students.top()).gettimeLeft() == 0){
-				forLog.push("Time " + time + ", Finished helping " + ((person) students.top()).getname() + " from COSC" + ((person) students.top()).getClassNumber());
+			if ( ((person) students.top()).gettimeLeft() == 1){
+				forLog.push("Time " + (time) + ", Finished helping " + ((person) students.top()).getname() + " from COSC" + ((person) students.top()).getClassNumber());
 				students.pop();
 			}
 			else
@@ -40,12 +40,10 @@ public class HelpDesk {
 		}
 		if (toAdd) {
 			students.push(new person(name, course, workload));
-			forLog.push("Time " + time + ", Started helping " + name + " from COSC" + course + " for " + workload
-					+ " minutes.");
+			forLog.push("Time " + (time) + ", Started helping " + name + " from COSC" + course);
 		} 
 		else{
-			forLog.push("Time " + time + ", Turned away " + name + " from COSC" + course + " for " + workload
-					+ " minutes.");
+			forLog.push("Time " + (time) + ", Turned away " + name + " from COSC" + course);
 		}
 	}
 
@@ -63,7 +61,7 @@ public class HelpDesk {
 	public String getLog(){
 		String log = "";
 		while(!forLog.isEmpty()){
-			log += forLog.top() + "/n";
+			log += forLog.top() + "\n";
 			forLog.pop();
 		}
 		return log;
